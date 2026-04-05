@@ -2427,6 +2427,20 @@
     // アプリ起動
     startApp();
   </script>
+<script>
+// URLパラメータによる自動カテゴリフィルター
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  const cat = params.get('category');
+  if (cat) {
+    const chip = document.querySelector('.category-chip[data-category="' + CSS.escape(cat) + '"]');
+    if (chip) {
+      chip.click();
+    }
+  }
+})();
+</script>
 
+  
 </body>
 </html>

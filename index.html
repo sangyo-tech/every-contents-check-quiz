@@ -1212,8 +1212,8 @@
 .unav-brand-ja{font-size:.95rem;color:#c8a84e;font-weight:700;line-height:1;font-family:"Hiragino Kaku Gothic ProN","Yu Gothic Medium","Meiryo",sans-serif;letter-spacing:.05em;margin-top:4px}
 .unav-links{display:flex;align-items:center;gap:4px}
 .unav-links a{color:#b0b8c8;text-decoration:none;font-size:.85rem;padding:8px 14px;border-radius:6px;transition:all .25s ease;white-space:nowrap;font-weight:500;background:none;border:none}
-.unav-links a:nth-child(1){color:#7dd3fc}.unav-links a:nth-child(2){color:#fda4af}.unav-links a:nth-child(3){color:#fcd34d}.unav-links a:nth-child(4){color:#86efac}.unav-links a:nth-child(5){color:#c4b5fd}.unav-links a:hover{color:#fff;background-color:rgba(200,168,78,.12)}
-.unav-links a.unav-active{color:#c8a84e;background-color:rgba(200,168,78,.15);font-weight:600}
+.unav-links a:nth-child(1){color:#7dd3fc}.unav-links a:nth-child(2){color:#fda4af}.unav-links a:nth-child(3){color:#fcd34d}.unav-links a:nth-child(4){color:#86efac}.unav-links a:nth-child(5){color:#c4b5fd}.unav-links a:nth-child(6){color:#67e8f9}.unav-links a:hover{color:#fff;background-color:rgba(200,168,78,.12)}
+.unav-links a.unav-active{color:#fff;font-weight:700;border-bottom:3px solid #c8a84e;padding-bottom:5px;border-radius:6px 6px 0 0;background:rgba(200,168,78,.08)}
 .unav-links a.unav-cta{color:#0a1628;background-color:#c8a84e;font-weight:600;border-radius:20px;padding:8px 18px;margin-left:4px}
 .unav-links a.unav-cta:hover{background-color:#d4b862;color:#0a1628}
 .unav-toggle{display:none;background:none;border:none;color:#c8a84e;font-size:1.5rem;cursor:pointer;padding:4px}
@@ -1231,10 +1231,11 @@
     <button class="unav-toggle" onclick="document.getElementById('unavLinks').classList.toggle('unav-open')" aria-label="メニュー">☰</button>
     <div class="unav-links" id="unavLinks">
       <a href="https://sangyo-tech.jp/">TOP</a>
-      <a href="https://course.sangyo-tech.jp/">コース</a>
+      <a href="https://course.sangyo-tech.jp/" class="unav-active">コース</a>
       <a href="https://pricing.sangyo-tech.jp/">料金</a>
       <a href="https://service.sangyo-tech.jp/">支援サービス</a>
-      <a href="https://about-us.sangyo-tech.jp/">会社情報</a>
+      <a href="https://sangyo-tech.jp/news/">規制ニュース</a>
+      <a href="https://about-us.sangyo-tech.jp/">私たちについて</a>
       <a href="https://apply.sangyo-tech.jp/" class="unav-cta">お申込み</a>
     </div>
   </nav>
@@ -1291,6 +1292,14 @@
               <option value="トヨタ生産方式コース">トヨタ生産方式コース</option>
               <option value="標準化コース">標準化コース</option>
               <option value="DX・データ活用コース">DX・データ活用コース</option>
+            </optgroup>
+            <optgroup label="⚕️ 医薬・化粧品・法規制">
+              <option value="GQP省令コース">GQP省令コース</option>
+              <option value="食品表示法・景品表示法コース">食品表示法・景品表示法コース</option>
+            </optgroup>
+            <optgroup label="📦 包装・印刷">
+              <option value="包装資材・段ボールコース">包装資材・段ボールコース</option>
+              <option value="印刷・インク品質コース">印刷・インク品質コース</option>
             </optgroup>
           </select>
         </div>
@@ -1518,7 +1527,11 @@
       "品質人材育成・組織マネジメントコース": ["品質人材育成とOJT設計","改善能力の育成"],
       "トヨタ生産方式コース": ["トヨタ生産方式（TPS）とは","カンバン方式とは何か","アンドン・カンバン・ボードによる見える化"],
       "標準化コース": ["標準化の重要性","文書・記録・版管理の基礎","標準作業・タクトタイム・レイアウト改善"],
-      "DX・データ活用コース": ["eQMSと現場データ活用入門","eQMS運用ルールと電子記録の信頼性"]
+      "DX・データ活用コース": ["eQMSと現場データ活用入門","eQMS運用ルールと電子記録の信頼性"],
+      "GQP省令コース": ["第1回：GQP省令とは何か — 品質管理基準の全体像と位置づけ","第2回：品質保証責任者（QP）の役割・要件・実務","第3回：製造業者との取決め — GQP省令第7条の実務","第4回：市場への出荷管理 — 出荷判定の手順と記録","第5回：変更管理と逸脱管理 — GQP省令第9・10条","第6回：品質情報処理と回収対応 — GQP省令第11条・回収管理","第7回：自己点検・教育訓練・文書管理 — GQP省令の維持管理三本柱"],
+      "食品表示法・景品表示法コース": ["第1回：食品表示法の目的と全体像 — 消費者庁の役割","第2回：アレルゲン表示の実務 — 特定原材料8品目と義務/推奨の違い","第3回：栄養成分表示の実務 — 5必須項目と測定方法","第4回：景品表示法の基礎 — 不当表示の3類型と2024年改正","第5回：食品表示違反の予防と内部監査 — 実務チェックリストの活用"],
+      "包装資材・段ボールコース": ["第1回：段ボールの基礎知識 — 構造・フルート種類・JIS規格","第2回：段ボールの品質検査実務 — BCT・含水率・受入検査手順","第3回：プラスチック包装材の種類と食品衛生規制","第4回：包装資材のコスト管理とサステナビリティ対応"],
+      "印刷・インク品質コース": ["第1回：印刷品質管理の基礎 — 色差ΔE・バーコード品質・受入検査","第2回：インク安全性管理 — NL規制・食品接触材料・残留溶剤","第3回：ラベル表示管理と改訂管理 — 薬機法・食品表示法との連携","第4回：グリーンマーク・植物油インク・環境配慮印刷"]
     };    let searchQuery = '';
     let filteredVideos = [];
     let currentQuestions = [];

@@ -1,0 +1,4 @@
+# robots.txt for quiz.sangyo-tech.jp
+# Paid subscriber content - search engines should NOT index this site.
+User-agent: *
+Disallow: /
